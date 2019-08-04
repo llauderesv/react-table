@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import React, { useMemo } from 'react';
+import { useMockData } from './Hooks';
+import Table from './components/Table';
+import ErrorMessage from './components/ErrorMessage';
 
 function App() {
+  const [data, error] = useMockData();
+
+  const columns = useMemo(
+    () => [
+      {
+        Header: 'First Name',
+        accessor: 'first_name',
+      },
+      {
+        Header: 'Last Name',
+        accessor: 'last_name',
+      },
+    ],
+    []
+  );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React Table Example</h1>
+      {!error ? (
+        <Table columns={columns} data={data} />
+      ) : (
+        <ErrorMessage>{error}</ErrorMessage>
+      )}
     </div>
   );
 }
