@@ -1,0 +1,25 @@
+.select-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.select {
+  height: 100%;
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(233, 233, 233);
+  }
+
+  p {
+    margin-right: 5px;
+  }
+}
+
+.active {
+  background-color: rgb(233, 233, 233);
+}

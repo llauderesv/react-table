@@ -1,0 +1,12 @@
+.search-keyword {
+  width: 30%;
+  height: 85%;
+  box-sizing: border-box;
+  font-size: 15px;
+  background: none;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}

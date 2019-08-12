@@ -4,7 +4,16 @@
   align-items: center;
   justify-content: center;
   margin: 10px;
-  /* text-align: center; */
+
+  .react-table {
+    width: 80%;
+
+    > table {
+      margin-top: 20px;
+      display: block;
+      overflow-x: scroll;
+    }
+  }
 }
 
 .App-logo {

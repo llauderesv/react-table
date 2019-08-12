@@ -1,0 +1,16 @@
+table {
+  // width: 100%;
+  border-spacing: 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid rgba(73, 73, 73, 0.158);
+}
+
+table th,
+table td {
+  margin: 0;
+  padding: 0.5rem;
+}
